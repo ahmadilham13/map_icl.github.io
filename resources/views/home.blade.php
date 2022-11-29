@@ -138,7 +138,6 @@
 </div>
 @push('script')
     {{-- //import axios --}}
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
 
         mapboxgl.accessToken = 'pk.eyJ1IjoiYXJrYW5mYXV6YW45MyIsImEiOiJja3U2djJtYjcycm00Mm5vcTh0bHJxMmh6In0.8p3Sy60ztY0-uY-UTZSFHQ';
@@ -168,7 +167,6 @@
                 
                 document.getElementById("alamat").value = address
                 document.getElementById("coordinate").value = coordinate
-                // setForm(address, coordinate);
                 map.getSource('single-point').setData(result.geometry);
             })
 
@@ -219,11 +217,7 @@
                     }
                 }]
             })
-            await axios.get('https://api.mapbox.com/geocoding/v5/mapbox.places/${e.lngLat.lng},${e.lngLat.lat}.json?token=')
         })
-
-        
-       
     </script>
 @endpush
 @endsection

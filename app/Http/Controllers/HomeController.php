@@ -46,8 +46,6 @@ class HomeController extends Controller
             $record = Record::all()->where('user_id', Auth::id());
         }
         
-        
-
         return view('home', [
             'records' => $record
         ]);
